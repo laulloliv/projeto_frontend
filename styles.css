@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #a09038;
+}
+
+ul {
+    list-style: none;
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+body {
+    background-image: url(./imgs/pexels-alex-conchillos-3648850.jpg);
+    background-repeat: no-repeat;
+    background-position: center center fixed;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 45px;
+    /*border-bottom: 2px solid #FFF;*/
+    /*box-shadow: 1px 1px 10px 1px #FFF;*/
+    /*border-bottom: 15px ridge #FFF;*/
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    padding: 5px;
+    /*border-right: 2px dashed #FFF;*/
+}
+
+header ul li a {
+    transition: 300ms;
+}
+
+header ul li a:hover {
+    color: #c0a717;
+    text-decoration: underline;
+}
+
+
+/*header ul li:first-child() {
+    padding: 5px;
+    border-left: 2px dashed #FFF;
+}*/
+
+.container {
+    text-align: center;
+}
+
+.container .nome h1 {
+    font-size: 60px;
+}
+
+.container .nome h5 {
+    font-size: 25px;
+}
+
+#arrow {
+    font-size: 35px;
+    cursor: pointer;
+    animation: blink 1s steps(5, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+#animation {
+    transition: 300ms;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+
+.active {
+    display: block !important;
+}
+
+#about p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 30px;
+    /*border: thick double #FFF;
+    padding: 25px;*/
+}
+
+.form input {
+    width: 50%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.form button {
+    width: 15%;
+    padding: 5px 10px;
+    background: linear-gradient(to right, #c0a717 50%, #9c551b 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    color: #FFF;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+    border-radius: 0px 5px 5px 0px;
+    margin-top: 20px;
+    margin-left: -5px;
+}
+
+.form button:hover {
+    background-position: left bottom;
+    color: #FFF;
+}
+
+
+/*--------------------RESPONSIVIDADE-------------------*/
+
+
+/*--------------------Ipad----------------------*/
+
+@media only screen and (max-width: 768px) {
+    .form {
+        width: 100%;
+    }
+}
+
+
+/*-------------------MOBILE--------------------*/
+
+@media only screen and (max-width: 480px) {
+    .container .nome h1 {
+        font-size: 30px;
+    }
+    .container .nome h5 {
+        font-size: 15px;
+    }
+    #about p {
+        max-width: 80%;
+        text-align: justify;
+    }
+}
